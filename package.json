@@ -1,0 +1,29 @@
+{
+  "name": "mini-pg-migrate",
+  "version": "0.0.1",
+  "keywords": [
+    "pg",
+    "node-postgres",
+    "migrate",
+    "migration"
+  ],
+  "license": "MIT",
+  "description": "A minimal postgres db migration",
+  "scripts": {
+    "dev": "vitest dev",
+    "db:generate": "npx ts-node src/cli/index.ts generate",
+    "db:migrate:up": "npx ts-node src/cli/index.ts migrate:up",
+    "db:migrate:down": "npx ts-node src/cli/index.ts migrate:down"
+  },
+  "dependencies": {
+    "c12": "^1.11.1",
+    "citty": "^0.1.6",
+    "pg": "^8.12.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.11",
+    "@types/pg": "^8.11.6",
+    "typescript": "^5.5.3",
+    "vitest": "^2.0.3"
+  }
+}

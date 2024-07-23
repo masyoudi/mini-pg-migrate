@@ -1,0 +1,7 @@
+{
+  "dbuser": "postgres",
+  "dbpassword": "",
+  "dbhost": "localhost",
+  "dbport": 5432,
+  "dbname": "mini_pg_migrate"
+}
