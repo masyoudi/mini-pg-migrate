@@ -24,6 +24,10 @@
   "files": [
     "dist"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/masyoudi/mini-pg-migrate"
+  },
   "scripts": {
     "build": "unbuild",
     "dev": "vitest dev",
