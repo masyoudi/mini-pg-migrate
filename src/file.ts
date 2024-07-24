@@ -21,7 +21,7 @@ export function isValidPattern(value: string) {
 }
 
 export function generate(path: string, name: string, version?: string) {
-  if (!/^\d+$/.test(version ?? '')) {
+  if (typeof version === 'string' && !/^\d+$/.test(version)) {
     throw new Error('Version must be a number');
   }
 
