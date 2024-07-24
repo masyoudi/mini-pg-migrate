@@ -13,17 +13,17 @@ $ npm install -D mini-pg-migrate
 ### generate
 
 ```bash
-$ mini-pg-migrate generate <MIGRATION FILE NAME> <TARGET DIRECTORY> <VERSION>
+$ node node_modules/mini-pg-migrate/dist/index.cjs generate <MIGRATION FILE NAME> <TARGET DIRECTORY> <VERSION>
 ```
 
 ### up
 
 ```bash
-$ mini-pg-migrate migrate:up <PATH TO CONFIG FILE> <MIGRATION DIR>
+$ node node_modules/mini-pg-migrate/dist/index.cjs migrate:up <PATH TO CONFIG FILE> <MIGRATION DIR>
 ```
 
 ### down
 
 ```bash
-$ mini-pg-migrate migrate:down <PATH TO CONFIG FILE> <MIGRATION DIR>
+$ node node_modules/mini-pg-migrate/dist/index.cjs migrate:down <PATH TO CONFIG FILE> <MIGRATION DIR>
 ```
