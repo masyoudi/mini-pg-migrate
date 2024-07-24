@@ -1,5 +1,5 @@
 import { expect, it, describe } from 'vitest';
-import setup from '../src/index';
+import setup from '../src/setup';
 
 describe('setup()', () => {
   it('should return object', async () => {

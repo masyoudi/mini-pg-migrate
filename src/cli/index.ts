@@ -1,9 +1,9 @@
-import { defineCommand, runMain } from 'citty';
+import { defineCommand } from 'citty';
 import generate from './commands/generate';
 import migrateDown from './commands/migrate-down';
 import migrateUp from './commands/migrate-up';
 
-const main = defineCommand({
+export default defineCommand({
   meta: {
     name: 'mini-pg-migrate',
     description: 'PostgreSQL database migrator'
@@ -14,5 +14,3 @@ const main = defineCommand({
     'migrate:up': migrateUp
   }
 });
-
-runMain(main);

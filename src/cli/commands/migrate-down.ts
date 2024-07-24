@@ -1,6 +1,6 @@
 import { defineCommand } from 'citty';
 import { setupPool, migrate, getVersions } from '../../db';
-import setup from '../../index';
+import setup from '../../setup';
 
 const MIGRATION_TYPE = 'down';
 
