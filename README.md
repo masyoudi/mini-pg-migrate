@@ -1,5 +1,7 @@
 # mini-pg-migrate
 
+PostgreSQL database migration
+
 # Usage
 
 ## Instalation
@@ -15,6 +17,8 @@ $ npm install -D mini-pg-migrate
 ```bash
 $ node node_modules/mini-pg-migrate/dist/index.cjs generate <MIGRATION FILE NAME> <TARGET DIRECTORY> <VERSION>
 ```
+
+> VERSION is optional
 
 ### up
 

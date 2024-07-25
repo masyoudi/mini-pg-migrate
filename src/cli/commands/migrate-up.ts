@@ -3,6 +3,7 @@ import { setupPool, migrate } from '../../db';
 import setup from '../../setup';
 
 const MIGRATION_TYPE = 'up';
+let terminated = false;
 
 export default defineCommand({
   meta: {
@@ -47,12 +48,25 @@ export default defineCommand({
       }
 
       for (let i = 0; i < files.length; i++) {
-        await migrate(pool, files[i], MIGRATION_TYPE, args.force === 'force');
+        if (terminated) {
+          break;
+        }
+
+        const { success } = await migrate(pool, files[i], MIGRATION_TYPE, args.force === 'force');
+
+        if (!success) {
+          break;
+        }
       }
 
       await pool?.end();
     } catch (err: any) {
       console.error('[ERROR]', err.message, err.stack);
+      process.exit(1);
     }
   }
+});
+
+process.on('SIGTERM', () => {
+  terminated = true;
 });

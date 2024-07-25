@@ -28,6 +28,7 @@ export default defineCommand({
       generate(args.path, args.name, args.version);
     } catch (err: any) {
       console.error('[ERROR]', err.message);
+      process.exit(1);
     }
   }
 });

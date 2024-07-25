@@ -10,7 +10,6 @@
   "license": "MIT",
   "description": "A minimal postgres db migration",
   "sideEffects": false,
-  "type": "module",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -32,9 +31,9 @@
     "build": "unbuild",
     "dev": "vitest dev",
     "prepack": "pnpm run build",
-    "db:generate": "npx ts-node src/index.ts generate",
-    "db:migrate:up": "npx ts-node src/index.ts migrate:up",
-    "db:migrate:down": "npx ts-node src/index.ts migrate:down"
+    "db:generate": "npx tsx src/index.ts generate",
+    "db:migrate:up": "npx tsx src/index.ts migrate:up",
+    "db:migrate:down": "npx tsx src/index.ts migrate:down"
   },
   "dependencies": {
     "c12": "^1.11.1",
