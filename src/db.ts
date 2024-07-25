@@ -98,6 +98,7 @@ export async function getVersions(pool: pg.Pool) {
 
 export async function migrate(pool: pg.Pool, file: MigrationFile, type: 'up' | 'down', force: boolean = false) {
   const client = await pool.connect();
+  let success = false;
   try {
     await client.query('BEGIN');
     const isExists = await checkVersion(client, file.version);
@@ -114,10 +115,13 @@ export async function migrate(pool: pg.Pool, file: MigrationFile, type: 'up' | '
 
     await client.query('COMMIT');
     console.info('Processed migration ' + file.name);
+    success = true;
   } catch (err: any) {
     console.error('[ERROR]', err.message);
     await client.query('ROLLBACK');
   } finally {
     client.release();
   }
+
+  return { success };
 }
