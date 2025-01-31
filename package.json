@@ -1,6 +1,6 @@
 {
   "name": "mini-pg-migrate",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "keywords": [
     "pg",
     "node-postgres",
@@ -23,9 +23,12 @@
   "files": [
     "dist"
   ],
+  "bin": {
+    "mini-pg-migrate": "./dist/index.mjs"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/masyoudi/mini-pg-migrate"
+    "url": "git+https://github.com/masyoudi/mini-pg-migrate.git"
   },
   "scripts": {
     "build": "unbuild",
@@ -46,6 +49,5 @@
     "typescript": "^5.5.3",
     "unbuild": "^2.0.0",
     "vitest": "^2.0.3"
-  },
-  "packageManager": "pnpm@9.6.0"
+  }
 }
