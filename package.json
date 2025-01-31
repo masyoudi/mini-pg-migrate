@@ -1,6 +1,6 @@
 {
   "name": "mini-pg-migrate",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "keywords": [
     "pg",
     "node-postgres",
@@ -24,7 +24,7 @@
     "dist"
   ],
   "bin": {
-    "mini-pg-migrate": "./dist/index.mjs"
+    "mini-pg-migrate": "./dist/index.cjs"
   },
   "repository": {
     "type": "git",
