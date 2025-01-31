@@ -36,12 +36,14 @@ $ node node_modules/mini-pg-migrate/dist/index.cjs migrate:up <PATH TO CONFIG FI
 ```
 
 with scripts within `package.json`
+
 ```json
 {
   "scripts": {
     "migration:up": "mini-pg-migrate migrate:up <PATH TO CONFIG FILE> <MIGRATION DIR>"
   }
 }
+```
 
 ### down
 
@@ -50,6 +52,7 @@ $ node node_modules/mini-pg-migrate/dist/index.cjs migrate:down <PATH TO CONFIG 
 ```
 
 with scripts within `package.json`
+
 ```json
 {
   "scripts": {
